@@ -1,0 +1,27 @@
+import pygame
+import sys
+
+pygame.init()
+
+
+
+screen = pygame.display.set_mode((900, 550))
+screen.fill((100, 150, 200))
+
+r = pygame.Rect(50, 400, 150, 100)
+pygame.draw.rect(screen, (200, 0, 50), r, 0)
+
+dino_surf = pygame.image.load('dino.bmp')
+dino_rect = dino_surf.get_rect(
+    bottomright=(900, 550))
+screen.blit(dino_surf, dino_rect)
+
+pygame.display.update()
+
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+    pygame.display.flip()
