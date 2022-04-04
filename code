@@ -16,7 +16,7 @@ playerStand = pygame.image.load('dino.png')
 clock = pygame.time.Clock()
 
 x = 50
-y = 250
+y = 270
 width = 80
 height = 100
 speed = 7
