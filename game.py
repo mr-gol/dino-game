@@ -8,7 +8,7 @@ level_0 = {'ground': 'levels/0/level_0_ground.csv',
 		'player': 'levels/0/level_0_player.csv',
 		#'stuff': 'levels/0/level_0_stuff.csv',
 		#'human': 'levels/0/level_0_human.csv',
-		'unlock': 2}
+		'unlock': 1}
 
 #level_1 = {'ground': 'levels/0/level_0_ground.csv',
 		#'flower': 'levels/0/level_0_flower.csv',
