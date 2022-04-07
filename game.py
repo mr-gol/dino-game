@@ -241,7 +241,6 @@ class Level:
                         ground_tile_list = import_cut_graphics('graphics/ground/ground_tile.png')
                         tile_surface = ground_tile_list[int(val)]
                         sprite = StaticTile(tile_size, x, y, tile_surface)
-                        sprite_group.add(sprite)
 
                     elif type == 'flower':
                         sprite = Flower(tile_size, x, y, 'graphics/flower/flower')
