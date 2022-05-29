@@ -6,14 +6,14 @@ from player import Player
 from game_data import levels
 
 pygame.mixer.init()
-bg_music = pygame.mixer.Sound('audio/bg_music.mp3')
+bg_music = pygame.mixer.music.load('audio/bg_music.mp3')
 
 class Level:
     def __init__(self, level_data, level_0, surface, change_flowers):
         self.display_surface = surface
         self.world_shift = 0
         self.current_x = None
-        bg_music.play(loops=-1)
+        pygame.mixer.music.play(bg_music)
         self.current_level = level_0
 
         player_layout = import_csv_layout(level_data['player'])
