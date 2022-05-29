@@ -9,7 +9,7 @@ pygame.mixer.init()
 bg_music = pygame.mixer.Sound('audio/bg_music.mp3')
 
 class Level:
-    def __init__(self, level_data, level_0, surface, change_flower):
+    def __init__(self, level_data, level_0, surface, change_flowers):
         self.display_surface = surface
         self.world_shift = 0
         self.current_x = None
@@ -21,7 +21,7 @@ class Level:
         self.goal = pygame.sprite.GroupSingle()
         self.player_setup(player_layout)
 
-        self.change_flower = change_flower
+        self.change_flowers = change_flowers
 
         ground_layout = import_csv_layout(level_data['ground'])
         self.ground_sprites = self.create_tile_group(ground_layout, 'ground')
