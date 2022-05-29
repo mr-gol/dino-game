@@ -6,22 +6,26 @@ from game_data import level_0
 import button
 from ui import UI
 
+pygame.font.init()
 
 class Game:
-    def __init__(self):
-        self.flower = 0
-        self.ui = UI(screen)
+	def __init__(self):
+        
+		# game attributes
+		self.flowers = 0
 
-    def create_level(self,current_level):
-        self.level = Level(current_level, screen, self.change_flower)
+		# user interface
+		self.ui = UI(screen)
 
-    def change_flower(self, amount):
-        self.flower += amount
+		self.level = Level(level_0, screen,self.change_flowers)
 
-    def run(self):
-        self.level.run()
-        self.ui.show_coins(self.flower)
+	def change_flowers(self,amount):
+		self.flowers += amount
 
+	def run(self):
+		self.level.run()
+		self.ui.show_flowers(self.flowers)
+        
 
 pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
