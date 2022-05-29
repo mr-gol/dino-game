@@ -138,7 +138,7 @@ class Level:
         collided_flower = pygame.sprite.spritecollide(self.player.sprite, self.flower_sprites, True)
         if collided_flower:
             for flower in collided_flower:
-                self.change_flower(flower.value)
+                self.change_flower(1)
 
     def run(self):
         self.ground_sprites.update(self.world_shift)
