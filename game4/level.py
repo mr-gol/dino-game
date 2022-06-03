@@ -200,7 +200,8 @@ class Level(pygame.sprite.Sprite):
             self.flower_sound.play()
             for flower in collided_flowers:
                 self.change_flowers(1)
-
+                self.flowers += 1
+                
     def check_human_collisions(self):
         human_collision = pygame.sprite.spritecollide(self.player.sprite, self.human_sprites, False)
         if human_collision:
