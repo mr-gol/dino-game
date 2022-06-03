@@ -36,7 +36,6 @@ class Level(pygame.sprite.Sprite):
         
         # user interface
         self.change_flowers = change_flowers
-        self.flowers = flowers
 
         ground_layout = import_csv_layout(level_data['ground'])
         self.ground_sprites = self.create_tile_group(ground_layout, 'ground')
