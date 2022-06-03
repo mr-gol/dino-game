@@ -26,7 +26,7 @@ class Game:
     def __init__(self):
         self.flowers = 0
         self.ui = UI(screen)
-        self.level = Level(level_0, screen, self.change_flowers, self.ui.show_flowers())
+        self.level = Level(level_0, screen, self.change_flowers, self.ui.show_flowers(self.flowers))
 
     def change_flowers(self, amount):
         self.flowers += amount
