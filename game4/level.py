@@ -24,6 +24,7 @@ class Level(pygame.sprite.Sprite):
         self.current_x = None
         self.frame_index = 0
         self.animation_speed = 0
+        self.flowers = 0
 
         bg_music.play(loops=-1)
         self.flower_sound = pygame.mixer.Sound('audio/flower.mp3')
